@@ -1,0 +1,44 @@
+.header {
+  @include flex($jc: space-between, $ai: center);
+  margin: 0 1rem;
+
+  &__logo {
+    letter-spacing: .02rem;
+    background-color: $primary;
+    border-radius: 0 0 .5rem .5rem;
+    max-width: 7rem;
+    padding: 2.01rem .7rem .7rem;
+
+    &--accent {
+      font-size: 1.2rem;
+      color: $dark;
+    }
+
+    &--link {
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $accent;
+    }
+  }
+
+  &__nav {
+    @include flex($jc: space-between, $ai: center);
+    width: 100%;
+    max-width: 22.51rem;
+
+    &--link {
+      @include link-txt($nav-color);
+
+      &:hover {
+        color: $primary;
+        filter: drop-shadow(0 0 .2rem $nav-accent);
+      }
+    }
+
+    &--img {
+      max-height: .9rem;
+    }
+  }
+}
